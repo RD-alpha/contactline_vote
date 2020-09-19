@@ -1,0 +1,12 @@
+
+<%= javascript_include_tag "keygen", "data-turbolinks-track" => "reload" %>
+<h1 id="title"><%= @question_text %></h1>
+
+
+<div id="container">
+
+  <div id="yes" class="answer" onclick="sendResponse(true, <%= @question_id%> )"><p>Yes</p></div>
+
+  <div id="no" class="answer" onclick="sendResponse(false, <%= @question_id%>)"><p>No</p></div>
+
+</div>

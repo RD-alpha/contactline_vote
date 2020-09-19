@@ -1,0 +1,77 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+body{
+  background-color: black;
+  color:white;
+  font-family: 'Arimo', sans-serif;
+}
+h1{
+  text-align: center;
+  margin: 50px 0 20px 0;
+}
+
+
+#container{
+  display:flex;
+  flex-direction: column;
+  width:100%;
+  justify-content: center;
+}
+@media screen and (min-width: 900px) {
+  #container {
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.answer{
+  height:300px;
+  width:300px;
+  margin:50px;
+  border-radius: 4px;
+  display: flex;
+ justify-content: center;
+ align-items: center;
+ cursor: pointer;
+}
+.answer:hover{
+  background-color: #FB8B24 !important;
+}
+.answer p{
+  font-size: 50px;
+font-family: 'Russo One', sans-serif;
+  color: white;
+}
+
+#yes{
+  background-color: #0F8B8D;
+}
+#no{
+  background-color: #9A031E;
+}
+/*
+#yes:hover{
+  background-color: #FB8B24;
+}
+#no:hover{
+  background-color: #FB8B24;
+}*/
+#chartDiv{
+  width:80%;
+  margin:auto;
+  padding-top:10px;
+  display: block;
+  position: relative;
+}
+@media screen and (min-width: 900px) {
+  #chartDiv{
+    width:600px;
+    margin:auto;
+    padding-top:10px;
+    display: block;
+    position: relative;
+  }
+}
