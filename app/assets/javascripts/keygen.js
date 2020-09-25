@@ -1,7 +1,7 @@
 var user_id = null;
 var token=null;
 window.onload = function(){
-let empty_arr = new Uint32Array(1);
+let empty_arr = new Uint16Array(1);
 let arr = window.crypto.getRandomValues(empty_arr);
 user_id = arr[0];
 console.log(user_id);
