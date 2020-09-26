@@ -12,5 +12,7 @@ class MainController < ApplicationController
     @no_count= @current_q[:no_response]
   end
   def wait
+    @current_q  = Question.find_by current: 1
+    @question_id = @current_q[:id]
   end
 end
