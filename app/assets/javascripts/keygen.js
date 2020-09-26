@@ -10,6 +10,17 @@ token=document.head.querySelector('meta[name="csrf-token"]').content
 
 function sendResponse(response, quid){
   const XHR = new XMLHttpRequest();
+  XHR.onreadystatechange = function () {
+    if (XHR.readyState == 3){
+      document.getElementById("title").innerHTML = "loading";
+    }
+    if (XHR.readyState == 4){
+document.open();
+document.write(XHR.responseText);
+document.close();
+}
+
+}
   if(user_id){
   let urlEncodedData = `user_id=${user_id}&response=${response}&quid=${quid}`;
   XHR.open('POST', '/responses');
