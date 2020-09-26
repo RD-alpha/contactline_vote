@@ -9,6 +9,7 @@ class QuestionsController < ApplicationController
     if @question_id != params[:id]
       @return_value = "1"
     end
+    puts @return_value
     render plain: @return_value
   end
 end
