@@ -4,9 +4,9 @@
   const XHR = new XMLHttpRequest();
   XHR.open('GET', '/questions/newq/'+ "<%= @question_id%>");
   XHR.send();
-  XHR.onload(){
+  XHR.onload = function(){
     if(XHR.response=="1"){
-      window.reload();
+      window.location.reload();
     }
   }
 }
