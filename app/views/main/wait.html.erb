@@ -5,7 +5,7 @@
   XHR.open('GET', '/questions/newq/'+ "<%= @question_id%>");
   XHR.send();
   XHR.onload = function(){
-    if(XHR.response=="1"){
+    if(XHR.response ===  "1"){
       window.location.reload();
     }
   }

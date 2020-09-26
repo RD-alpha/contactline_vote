@@ -1,8 +1,6 @@
 class ResponsesController < ApplicationController
   def create
-    puts params
     params.permit(:user_id, :response,:quid)
-    puts params[:quid]
     @response = Response.new(user_id:params[:user_id],response: params[:response])
     @response.save
     @question = Question.find(params[:quid])
