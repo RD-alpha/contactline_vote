@@ -2,8 +2,8 @@
 <script type="text/javascript">
   function checkQuestions(){
   const XHR = new XMLHttpRequest();
-  XHR.open('GET', '/main/newq/'+ <%= @question_id%>)
-  XHR.send()
+  XHR.open('GET', '/main/newq/'+ <%= @question_id%>);
+  XHR.send();
   XHR.onload(){
     if(XHR.response=="1"){
       window.reload();
