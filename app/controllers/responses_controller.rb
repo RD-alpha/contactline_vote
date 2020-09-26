@@ -12,6 +12,6 @@ class ResponsesController < ApplicationController
       @question.increment(:no_response)
     end
     @question.save
-    redirect_to :controller => 'main', :action => 'results'
+    redirect_to :controller => 'main', :action => 'wait'
   end
 end

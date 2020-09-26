@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'main/index'
   get 'main/results'
-  get 'main/newq'
+  get 'questions/newq(/:id)', to: 'questions#newq'
   put 'admin', to: 'admin#update'
   resources :responses, :questions, :admin
   root 'main#index'

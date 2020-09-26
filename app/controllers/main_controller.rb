@@ -11,6 +11,6 @@ class MainController < ApplicationController
     @yes_count = @current_q[:yes_response]
     @no_count= @current_q[:no_response]
   end
-  def newq
+  def wait
   end
 end
