@@ -7,7 +7,7 @@ class QuestionsController < ApplicationController
     puts @question_id
     puts params[:id]
     puts @return_value
-    unless @question_id == params[:id]
+    unless @question_id.to_i == params[:id].to_i
       @return_value = "1"
     end
     puts @return_value
