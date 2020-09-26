@@ -6,7 +6,8 @@ class QuestionsController < ApplicationController
     params.permit(:id)
     puts @question_id
     puts params[:id]
-    if @question_id != params[:id]
+    puts @return_value
+    unless @question_id == params[:id]
       @return_value = "1"
     end
     puts @return_value
