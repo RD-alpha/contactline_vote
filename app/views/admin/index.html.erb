@@ -2,5 +2,10 @@
 <%= label_tag(:id_a, "Question ID:") %>
 <%= number_field(:id_a, :id, in: 1..20, step: 1) %>
 <%= submit_tag("Submit") %>
+<% end %>
+<br>
+<br>
+<br>
+<%= form_with(method: "put") do %>
 <%= submit_tag("Reset", name: "reset") %>
 <% end %>
